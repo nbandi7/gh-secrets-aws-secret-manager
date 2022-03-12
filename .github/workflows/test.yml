@@ -4,7 +4,6 @@ jobs:
   test_secrets:
     runs-on: ubuntu-latest
     steps:
-      - shell: cmd
+      - run: echo ${TEST_SECRET}
         env: 
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
-        run: echo $TEST_SECRET
