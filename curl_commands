@@ -1,0 +1,22 @@
+Generate Public key to encrypt:
+
+curl \
+  -i -H "Authorization: token <bearer token>" \
+  -H "Accept: application/vnd.github.v3+json" \
+  https://api.github.com/repos/nbandi7/gh-secrets-aws-secret-manager/actions/secrets/public-key
+
+Get a secret:
+
+curl \
+  -i -H "Authorization: token <bearer token>" \
+  -H "Accept: application/vnd.github.v3+json" \
+  https://api.github.com/repos/nbandi7/gh-secrets-aws-secret-manager/actions/secrets/<Secret Name>
+
+Create or Update the Key:
+
+curl \
+  -X PUT \
+  -i -H "Authorization: token <bearer token>" \
+  -H "Accept: application/vnd.github.v3+json" \
+  https://api.github.com/repos/nbandi7/gh-secrets-aws-secret-manager/actions/secrets/NEW_SECRET \
+  -d '{"encrypted_value":"<Encrypted Secret Value>", "key_id":"<Public Key Id>"}'
