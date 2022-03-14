@@ -8,4 +8,4 @@ Steps:
 
 References:
 
-[Github Action Secrets] (https://docs.github.com/en/rest/reference/actions#secrets)
+[Github Action Secrets](https://docs.github.com/en/rest/reference/actions#secrets)
